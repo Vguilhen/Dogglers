@@ -16,9 +16,13 @@
 package com.example.dogglers.adapter
 
 import android.content.Context
+import android.media.Image
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dogglers.R
 import com.example.dogglers.data.DataSource
 import com.example.dogglers.model.Dog
 
@@ -31,14 +35,15 @@ class DogCardAdapter(
     private val layout: Int
 ): RecyclerView.Adapter<DogCardAdapter.DogCardViewHolder>() {
 
-    // TODO: Initialize the data using the List found in data/DataSource V
     private val data = DataSource.dogs
 
     /**
      * Initialize view elements
      */
     class DogCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
-        // TODO: Declare and initialize all of the list item UI components
+        val dogImage: ImageView = view!!.findViewById(R.id.dog_image)
+        val dogName: TextView = view!!.findViewById(R.id.dog_name)
+        val dogHobbies: TextView = view!!.findViewById(R.id.dog_hobbies)
 
     }
 
